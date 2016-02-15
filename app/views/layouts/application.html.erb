@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= "Project Hour" + yield(:title) %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -13,6 +13,19 @@
   </head>
 
   <body>
+    <header>
+      <div class="row">
+        <div class="column small-8 medium-5">
+          <h1>ProjectHour</h1>
+        </div>
+        <div class="column small-4 medium-7">
+          <ul class="show-for-medium-up inline-list right">
+            <li class="button">+ Project</li>
+            <li>projecten</li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
     <%= yield %>
 

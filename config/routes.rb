@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
+  resources :projects
   devise_for :users
-  root "project#index"
-  resources "project"
+  root "projects#index"
 end

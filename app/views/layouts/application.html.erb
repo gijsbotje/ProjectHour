@@ -7,6 +7,7 @@
     <title><%= "Project Hour" + yield(:title) %></title>
 
     <%= stylesheet_link_tag    "application" %>
+    <%= fontawesome_stylesheet_link_tag :netdna, force: true %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -14,20 +15,33 @@
 
   <body>
     <header>
-      <div class="row">
-        <div class="column small-8 medium-5">
-          <h2>ProjectHour</h2>
+      <div class="row collapse">
+        <div class="column small-5">
+          <nav class="main-nav">
+            <ul class="show-for-medium-up inline-list">
+              <li class="nav-item white-btn"><a href="#">+ Project</a></li>
+              <li class="nav-item"><a href="#">Projecten</a></li>
+            </ul>
+          </nav>
         </div>
-        <div class="column small-4 medium-7">
-          <ul class="show-for-medium-up inline-list right">
-            <li class="button">+ Project</li>
-            <li>projecten</li>
-          </ul>
+        <div class="column small-2 text-center">
+          <div class="align-center"><i class="fa fa-clock-o"></i></div>
+        </div>
+        <div class="column small-5">
+          <nav class="main-nav">
+            <ul class="inline-list right">
+              <li class="nav-item"><a href="#">Account</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
 
-    <%= yield %>
+    <section class="content-wrapper">
+      <%= yield %>
+    </section>
+
+
 
   </body>
 </html>

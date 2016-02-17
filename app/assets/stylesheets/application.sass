@@ -1,0 +1,83 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Nova+Square|Source+Sans+Pro:400,600,700,400italic,600italic)
+
+
+$primary: #1b97be
+
+
+*
+  font-family: 'Source Sans Pro', sans-serif
+
+h1, h2, h3, h4, h5
+  font-family: 'Nova Square', cursive
+  text-transform: uppercase
+body
+  background: #fdfdfd
+header
+  background: $primary
+  color: #fff
+  box-shadow: 0 2px 5px rgba(0,0,0,.26)
+  i
+    font-size: 2em
+    margin: 12px 0px
+  .row
+    width: 95%
+    max-width: 75rem
+  h2
+    color: #fff
+  nav.main-nav
+    ul
+      margin: 15px 0px
+      li
+        &.nav-item
+          &.white-btn a
+            background: #fff
+            color: $primary
+            border-radius: 3px
+            padding: 3px 10px
+            line-height: 1.2
+          a
+            color: #fff
+            font-family: 'Nova Square', cursive
+            text-transform: uppercase
+            &:hover
+              opacity: .7
+
+section.content-wrapper
+  margin-top: 50px
+  .panel
+    background: #fff
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.16),0 0 2px 0 rgba(0,0,0,.12)
+    border: none
+    padding: 0
+    .panel-head
+      background: #1B97BE
+      color: #fff
+      padding: 10px
+      h4
+        color: #fff
+        margin: 0
+    table
+      width: 100%
+      border: none
+      th
+        color: $primary
+      tr.even, tr.alt, tr:nth-of-type(even)
+        background: #f5fdff
